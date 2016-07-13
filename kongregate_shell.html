@@ -14,7 +14,16 @@
     </style>
     <script type="text/javascript">
       // Called when the API is finished loading
+      var kongregate;
       function start() {
+
+        var LoadingAPI = window.parent.LoadingAPI;
+        kongregate = window.parent.kongregateAPI.getAPI();
+
+        document.getElementById('contentdiv').innerHTML = kongregate.services.getUserId();
+
+        return;
+
         function onLoadCompleted(){
           document.getElementById('contentdiv').innerHTML = 'complete';
           // Get a global reference to the kongregate API. This way, pages included in the
