@@ -33,7 +33,8 @@
 
         // Begin the process of loading the Kongregate API:
         document.getElementById('contentdiv').innerHTML = 'load';
-        kongregateAPI.loadAPI(onLoadCompleted);
+
+        parent.kongregate.loadAPI(onLoadCompleted);
       }
     </script>
   </head>
