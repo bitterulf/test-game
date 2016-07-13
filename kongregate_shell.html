@@ -18,6 +18,7 @@
     <script type="text/javascript">
       // Called when the API is finished loading
       function onLoadCompleted(){
+        document.getElementById('contentdiv').innerHTML = 'complete';
         // Get a global reference to the kongregate API. This way, pages included in the
         // iframe can access it by using "parent.kongregate"
         kongregate = kongregateAPI.getAPI();
@@ -33,6 +34,7 @@
       }
 
       // Begin the process of loading the Kongregate API:
+      document.getElementById('contentdiv').innerHTML = 'load';
       kongregateAPI.loadAPI(onLoadCompleted);
     </script>
 
