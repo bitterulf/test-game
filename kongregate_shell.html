@@ -17,12 +17,10 @@
       var kongregate;
       function start() {
 
-        var LoadingAPI = window.parent.LoadingAPI;
-        kongregate = window.parent.kongregateAPI.getAPI();
+        // var LoadingAPI = window.parent.LoadingAPI;
+        // kongregate = window.parent.kongregateAPI.getAPI();
 
-        document.getElementById('contentdiv').innerHTML = kongregate.services.getUserId();
-
-        return;
+        // document.getElementById('contentdiv').innerHTML = kongregate.services.getUserId();
 
         function onLoadCompleted(){
           document.getElementById('contentdiv').innerHTML = 'complete';
@@ -37,13 +35,13 @@
           var params = "kongregate_user_id=" + kongregate.services.getUserId() +
                      "&kongregate_game_auth_token=" + kongregate.services.getGameAuthToken() +
                      "&random=" + (Math.random() * 1000000000);
-          kongregateAPI.embedFrame("game.html?" + params);
+          kongregateAPI.embedFrame("https://bitterulf.github.io/test-game/game.html?" + params);
         }
 
         // Begin the process of loading the Kongregate API:
         document.getElementById('contentdiv').innerHTML = 'load';
 
-        parent.kongregate.loadAPI(onLoadCompleted);
+        kongregateAPI.loadAPI(onLoadCompleted);
       }
     </script>
   </head>
