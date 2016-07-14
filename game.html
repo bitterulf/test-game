@@ -3,11 +3,13 @@
   <head>
     <title>Game</title>
   </head>
-
-  <body>
-    <script type="text/javascript">
-    </script>
-    <div>
+  <script type="text/javascript">
+    var start = function() {
+      document.getElementById('info').innerHTML='update';
+    };
+  </script>
+  <body onload="start()">
+    <div id="info">
       here is the game you want to play!
     </div>
   </body>
