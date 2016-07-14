@@ -10,6 +10,8 @@
       kongregate = window.parent.kongregateAPI.getAPI();
       console.log(kongregate.services.getUserId(), kongregate.services.getGameAuthToken());
       console.log(kongregate);
+      console.log(kongregate.services.getUsername());
+      console.log(kongregate.services.getPlayerInfo(), kongregate.services.isGuest());
     };
   </script>
   <body onload="start()">
